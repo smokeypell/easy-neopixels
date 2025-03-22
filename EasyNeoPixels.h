@@ -28,3 +28,10 @@ void writeEasyNeoPixel(int num, int r, int g, int b) {
   easyNeoPixels.setPixelColor(num, easyNeoPixels.Color(r,g,b));
   easyNeoPixels.show();
 }
+
+// set neopixels with color in array format
+// meant to be used with array for color eg: int red[3] = {255, 0, 0}, int green[3] = {0, 255, 0}, int blue[3] = {0, 0, 255}, etc.
+void writeEasyNeoPixel(int num, int color[]) {
+  easyNeoPixels.setPixelColor(num, color[0], color[1], color[2]);
+  easyNeoPixels.show();
+}
